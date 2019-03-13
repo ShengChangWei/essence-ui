@@ -1,6 +1,6 @@
-# e-vue-test
+# essence-ui
 
-## 组件测试
+## 内部ui组件初始框架
 ```
-npm install
+
 ```

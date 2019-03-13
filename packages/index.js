@@ -1,20 +1,27 @@
-import EVueTest from './e-vue-test/e-vue-test';
+import EsButton from './button/index.js'
+import EsInput from './input/index.js'
+import EsMap from './es-map/index.js'
 
 const components = [
-    EVueTest
+    EsButton,
+    EsInput,
+    EsMap
 ];
 
-const install = function (Vue) {
-    if (install['installed']) return;
+const install = function(Vue) {
+    if(install['installed']) return;
     components.map(component => Vue.component(component.name, component))
-};
+}
 
-// 判断是否是直接引入文件
-if (typeof window !== 'undefined' && window.Vue) {
+// 判断是否直接引入
+
+if(typeof window !== 'undefined' && window.Vue) {
     install(window.Vue)
 }
 
 export default {
     install,
-    EVueTest
+    EsButton,
+    EsInput,
+    EsMap
 }
